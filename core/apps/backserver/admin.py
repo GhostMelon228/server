@@ -1,3 +1,9 @@
 from django.contrib import admin
 
-# Register your models here.
+from core.apps.backserver.models import Method
+
+@admin.register(Method)
+class MethodAdmin(admin.ModelAdmin):
+    list_display = ('pk', 'title',)
+
+admin.register(Method, MethodAdmin)
