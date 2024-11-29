@@ -7,11 +7,18 @@
             <div class="col-lg-6 mx-auto">
                 <div class="card shadow mb-2">
                     <div class="card-header bg-transparent p-3">
-                        <h4 class="m-0">HOME PAGE</h4>
+                        <h3 class="m-0">HOME PAGE</h3>
                     </div>
-                    {{methods}}
 
                 </div>
+
+                <div class="card shadow mb-2">
+                    {% for method in methods %}
+                        <h7 class="m-0">{{method.title}}</h7>
+                    {% endfor %}
+                </div>
+
+
             </div>
         </div>
     </form>
